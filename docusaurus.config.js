@@ -17,7 +17,7 @@ const config = {
     'aspects of development on the platform. Provides lowest level ' +
     'information, guides and useful links.',
   url: 'https://taw-dev.github.io',
-  baseUrl: '/',
+  baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
