@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "commit": "git cz",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
@@ -35,6 +36,8 @@
     "@docusaurus/module-type-aliases": "2.3.1",
     "@docusaurus/types": "^2.3.1",
     "@tsconfig/docusaurus": "^1.0.5",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "typescript": "^4.7.4"
   },
   "browserslist": {
@@ -51,5 +54,10 @@
   },
   "engines": {
     "node": ">=16.14"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
