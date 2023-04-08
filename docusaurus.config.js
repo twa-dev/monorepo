@@ -71,7 +71,7 @@ const config = {
       docs: {sidebar: {autoCollapseCategories: true}},
       navbar: {
         items: [
-          {to: '/docs/from-authors', label: 'Docs', position: 'left'},
+          {type: 'doc', position: 'left', docId: 'from-authors', label: 'Docs'},
           {
             href: 'https://github.com/twa-dev/docs',
             position: 'right',
