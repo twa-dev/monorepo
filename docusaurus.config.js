@@ -16,8 +16,8 @@ const config = {
   tagline: 'Documentation by Telegram Web Apps enthusiasts covering all ' +
     'aspects of development on the platform. Provides lowest level ' +
     'information, guides and useful links.',
-  url: 'https://taw-dev.github.io',
-  baseUrl: '/docs/',
+  url: 'https://docs.twa.dev',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
