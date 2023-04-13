@@ -29,6 +29,13 @@ We wrote this documentation following this order:
 
 This will make your studying more consistent and understandable.
 
+:::caution
+
+This documentation is currently under heavy development and could be changed
+at any time.
+
+:::
+
 ## Conclusion
 
 In conclusion, we would like to say, that the result of our job is your
