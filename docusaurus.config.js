@@ -23,39 +23,36 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'twa-dev', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+  organizationName: 'twa-dev',
+  projectName: 'docs',
   trailingSlash: false,
   deploymentBranch: 'gh-pages-docs',
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'ru'],
   },
+
+  clientModules: [
+    require.resolve('./client-modules/analytics.js'),
+  ],
 
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {sidebarPath: require.resolve('./sidebars.js')},
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/twa-dev/docs/tree/master/',
+        },
         blog: false,
         theme: {customCss: require.resolve('./src/css/custom.scss')},
-        // TODO: Add statistics.
-        // gtag: {
-        //   trackingID: 'G-56XMKLCYLQ',
-        //   anonymizeIP: true,
-        // },
       }),
     ],
   ],
 
   stylesheets: [
-    // Google Fonts.
     {href: 'https://fonts.googleapis.com', rel: 'preconnect'},
     {
       href: 'https://fonts.gstatic.com',
@@ -72,6 +69,7 @@ const config = {
       navbar: {
         items: [
           {type: 'doc', position: 'left', docId: 'from-authors', label: 'Docs'},
+          {type: 'localeDropdown', position: 'right'},
           {
             href: 'https://github.com/twa-dev/docs',
             position: 'right',
@@ -83,47 +81,6 @@ const config = {
       footer: {
         style: 'dark',
         copyright: 'Made by Telegram Web Apps enthusiasts @ 2023',
-        links: [
-          // {
-          //   title: 'Docs',
-          //   items: [
-          //     {
-          //       label: 'Tutorial',
-          //       to: '/docs/intro',
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: 'Community',
-          //   items: [
-          //     {
-          //       label: 'Stack Overflow',
-          //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-          //     },
-          //     {
-          //       label: 'Discord',
-          //       href: 'https://discordapp.com/invite/docusaurus',
-          //     },
-          //     {
-          //       label: 'Twitter',
-          //       href: 'https://twitter.com/docusaurus',
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: 'More',
-          //   items: [
-          //     {
-          //       label: 'Blog',
-          //       to: '/blog',
-          //     },
-          //     {
-          //       label: 'GitHub',
-          //       href: 'https://github.com/Telegram-Web-Apps',
-          //     },
-          //   ],
-          // },
-        ],
       },
       prism: {
         theme: lightCodeTheme,

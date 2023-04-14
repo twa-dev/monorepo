@@ -13,6 +13,9 @@ dependencies:
   '@mdx-js/react':
     specifier: ^1.6.22
     version: 1.6.22(react@17.0.2)
+  '@types/mixpanel-browser':
+    specifier: ^2.38.1
+    version: 2.38.1
   '@types/react':
     specifier: ^18.0.25
     version: 18.0.25
@@ -25,6 +28,9 @@ dependencies:
   docusaurus-plugin-sass:
     specifier: ^0.2.2
     version: 0.2.2(@docusaurus/core@2.3.1)(node-sass@8.0.0)(sass@1.56.1)(webpack@5.78.0)
+  mixpanel-browser:
+    specifier: ^2.46.0
+    version: 2.46.0
   node-sass:
     specifier: ^8.0.0
     version: 8.0.0
@@ -2935,6 +2941,10 @@ packages:
 
   /@types/minimist@1.2.2:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
+    dev: false
+
+  /@types/mixpanel-browser@2.38.1:
+    resolution: {integrity: sha512-XzQbwgiOPsFXUQnjz3vSwcwrvJDbQ35bCiwa/1VXGrHvU1ti9+eqO1GY91DShzkEzKkkEEkxfNshS5dbBZqd7w==}
     dev: false
 
   /@types/node@17.0.45:
@@ -6741,6 +6751,10 @@ packages:
     dependencies:
       minipass: 3.3.6
       yallist: 4.0.0
+    dev: false
+
+  /mixpanel-browser@2.46.0:
+    resolution: {integrity: sha512-qPFhAFMf5YzzGPd/sgoEl7G0N/ypJ6IaZmjkMYEPiW60i1Muo+v2Zl/dqRcCXwYfF5GvC5175muS1ZuaaYGXAQ==}
     dev: false
 
   /mkdirp@1.0.4:

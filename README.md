@@ -28,4 +28,5 @@ which makes commits more understandable. Here is how it works:
 ## TODO
 
 - [ ] Create GitHub workflow which allows pull request deploy to check if
-documentation works fine. So, just a build test is not enough
+documentation works fine. So, just a build test is not enough;
+- [ ] Docs versioning.
