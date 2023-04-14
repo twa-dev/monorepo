@@ -29,6 +29,11 @@ We wrote this documentation following this order:
 
 This will make your studying more consistent and understandable.
 
+This documentation provides information about the whole Web Apps platform - its
+concepts, workflow, features, libraries, etc. It also contains tutorials and
+notes for developers, which will be rather useful in the process of application
+development.
+
 :::caution
 
 This documentation is currently under heavy development and could be changed
