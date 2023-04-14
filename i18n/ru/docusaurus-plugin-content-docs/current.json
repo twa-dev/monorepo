@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.sidebar.category.Introduction": {
+    "message": "Введение",
+    "description": "The label for category Introduction in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Apps communication": {
+    "message": "Apps communication",
+    "description": "The label for category Apps communication in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Launch parameters": {
+    "message": "Launch parameters",
+    "description": "The label for category Launch parameters in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Init data": {
+    "message": "Init data",
+    "description": "The label for category Init data in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Features": {
+    "message": "Features",
+    "description": "The label for category Features in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Tutorials and recipes": {
+    "message": "Tutorials and recipes",
+    "description": "The label for category Tutorials and recipes in sidebar sidebar"
+  }
+}
