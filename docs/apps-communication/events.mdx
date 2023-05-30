@@ -4,16 +4,20 @@ sidebar_position: 3
 
 # Events
 
-There are a lot of cases, when Telegram sends events to Web App which,
-obviously, should be somehow handled. Like methods, each event has its unique
-name and payload.
+Events are signals, sent from Telegram native application in case, when
+some external action was done. Like methods, each event has its unique
+name and parameters.
 
 ## Web
 
 As mentioned before, the web version uses a standard way of communication
 between iframes. It means, the parent iframe is able to send events
-through `postMessage` function. To handle this type of message, it is enough to
-add `message` event listener on the global `window` object.
+through `window.postMessage` function. To handle this type of message, it is enough to
+add `message` event listener on the global `window` object:
+
+```typescript
+window.addEventListener('message', ...);
+```
 
 The native application will send an event with `data: string` which represents a
 JSON object converted to string. This object has the same interface as we
@@ -26,7 +30,7 @@ interface MessageJSON {
 }
 ```
 
-Simple example:
+Then, lets imagine how we could process an event from Telegram application:
 
 ```typescript
 window.addEventListener('message', ({data}) => {
@@ -81,9 +85,7 @@ events inside the section could be sent.
 
 #### `invoice_closed`
 
-An invoice was closed. The event contains passed
-during [`web_app_open_invoice`](methods#web_app_open_invoice) method
-invocation `slug` and the invoice status.
+An invoice was closed.
 
 <table>
   <thead>
@@ -136,15 +138,15 @@ invocation `slug` and the invoice status.
 
 #### `main_button_pressed`
 
-User clicked the [Main Button](../features/main-button).
+User clicked the [Main Button](../ui/back-button).
 
 #### `popup_closed`
 
-[Popup](../features/popup) was closed.
+[Popup](../ui/popup) was closed.
 
-| Field     | Type     | Description                                                                                                                |
-|-----------|----------|----------------------------------------------------------------------------------------------------------------------------|
-| button_id | `string` | Identifier of the clicked button. In case, the popup was closed without clicking any button, this property will be omitted |
+| Field     | Type     | Description                                                                                                                            |
+|-----------|----------|----------------------------------------------------------------------------------------------------------------------------------------|
+| button_id | `string` | _Optional_. Identifier of the clicked button. In case, the popup was closed without clicking any button, this property will be omitted |
 
 #### `set_custom_style`
 
@@ -155,7 +157,7 @@ described in the payload will help the developer to stylize the app scrollbar
 
 #### `theme_changed`
 
-Occurs whenever [the theme](../features/theme) was changed in the user's
+Occurs whenever [the theme](../ui/theme-params) was changed in the user's
 Telegram app (including switching to night mode).
 
 | Field        | Type                     | Description                                                                                          |
@@ -164,13 +166,17 @@ Telegram app (including switching to night mode).
 
 #### `viewport_changed`
 
-Occurs whenever the [viewport](../features/viewport) has been changed. For
+Occurs whenever the [viewport](../ui/viewport) has been changed. For
 example, when the user started dragging the application or called the expansion
 method.
+
+:::caution
 
 Pay attention to the fact, that send rate of this method is not enough to
 smoothly resize the application window. You should probably use a stable height
 instead of the current one, or handle this problem in another way.
+
+:::
 
 | Field           | Type      | Description                                                                     |
 |-----------------|-----------|---------------------------------------------------------------------------------|
@@ -183,7 +189,7 @@ instead of the current one, or handle this problem in another way.
 
 #### `back_button_pressed`
 
-User clicked the [Back Button](../features/back-button).
+User clicked the [Back Button](../ui/back-button).
 
 #### `settings_button_pressed`
 

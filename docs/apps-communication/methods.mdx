@@ -106,7 +106,7 @@ class [`Message`](https://core.telegram.org/bots/api#message).
 
 #### `web_app_expand`
 
-[Expands](../features/viewport) the Web App.
+[Expands](../ui/viewport) the Web App.
 
 #### `web_app_open_link`
 
@@ -123,18 +123,18 @@ will make Telegram to remove application loader and display Web App.
 
 #### `web_app_request_theme`
 
-Requests current [theme](../features/theme) from Telegram. As a result, Telegram
+Requests current [theme](../ui/theme-params) from Telegram. As a result, Telegram
 will create [`theme_changed`](events#theme_changed) event.
 
 #### `web_app_request_viewport`
 
-Requests current [viewport](../features/viewport) information from Telegram. As
+Requests current [viewport](../ui/viewport) information from Telegram. As
 a result, Telegram will create [`viewport_changed`](events#viewport_changed)
 event.
 
 #### `web_app_setup_main_button`
 
-Updates the [Main Button](../features/main-button) settings.
+Updates the [Main Button](../ui/main-button) settings.
 
 | Field               | Type      | Description                                                                                                                                                        |
 |---------------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -147,7 +147,7 @@ Updates the [Main Button](../features/main-button) settings.
 
 #### `web_app_setup_closing_behavior`
 
-Updates current [closing behavior](../features/closing-behavior).
+Updates current [closing behavior](../functionality/closing-behavior).
 
 | Field             | Type      | Description                                                          |
 |-------------------|-----------|----------------------------------------------------------------------|
@@ -175,7 +175,7 @@ this [documentation](https://core.telegram.org/bots/payments).
 
 #### `web_app_setup_back_button`
 
-Updates the [Back Button](../features/back-button) settings.
+Updates the [Back Button](../ui/back-button) settings.
 
 | Field      | Type      | Description                        |
 |------------|-----------|------------------------------------|
@@ -184,7 +184,7 @@ Updates the [Back Button](../features/back-button) settings.
 #### `web_app_set_background_color`
 
 Updates the Web
-App [background color](../features/theme#background-and-header-colors).
+App [background color](../ui/theme-params#background-and-header-colors).
 
 | Field | Type     | Description                                       |
 |-------|----------|---------------------------------------------------|
@@ -192,7 +192,7 @@ App [background color](../features/theme#background-and-header-colors).
 
 #### `web_app_set_header_color`
 
-Updates the Web App [header color](../features/theme#background-and-header-colors).
+Updates the Web App [header color](../ui/theme-params#background-and-header-colors).
 
 | Field     | Type     | Description                                                                       |
 |-----------|----------|-----------------------------------------------------------------------------------|
@@ -200,7 +200,7 @@ Updates the Web App [header color](../features/theme#background-and-header-color
 
 #### `web_app_trigger_haptic_feedback`
 
-Generates the [haptic feedback](../features/haptic-feedback) event.
+Generates the [haptic feedback](../functionality/haptic-feedback) event.
 
 <table>
   <thead>
@@ -297,10 +297,8 @@ Generates the [haptic feedback](../features/haptic-feedback) event.
 
 #### `web_app_open_popup`
 
-Opens a new [popup](../features/popup). When user closes the popup, Telegram
+Opens a new [popup](../ui/popup). When user closes the popup, Telegram
 creates the [`popup_closed`](events#popup_closed) event.
-
-##### Parameters
 
 <table style={{marginTop: -10}}>
   <thead>

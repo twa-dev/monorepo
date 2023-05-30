@@ -24,8 +24,3 @@ which makes commits more understandable. Here is how it works:
 
 1. Stage changes (for example `git add -A`);
 2. Commit them and describe what changes were done via `pnpm run commit`.
-
-## TODO
-
-- [ ] Create GitHub workflow which allows pull request deploy to check if
-documentation works fine. So, just a build test is not enough

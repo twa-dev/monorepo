@@ -1,0 +1,26 @@
+{
+  "version.label": {
+    "message": "Текущая",
+    "description": "The label for version current"
+  },
+  "sidebar.sidebar.category.Introduction": {
+    "message": "Введение",
+    "description": "The label for category Introduction in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Apps communication": {
+    "message": "Общение приложений",
+    "description": "The label for category Apps communication in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Launch parameters": {
+    "message": "Параметры запуска",
+    "description": "The label for category Launch parameters in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.UI": {
+    "message": "UI",
+    "description": "The label for category UI in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Functionality": {
+    "message": "Функциональные возможности",
+    "description": "The label for category Functionality in sidebar sidebar"
+  }
+}
