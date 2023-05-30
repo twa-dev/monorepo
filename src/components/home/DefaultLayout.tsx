@@ -12,7 +12,7 @@ export function DefaultLayout() {
 
   return (
     <Layout noFooter={true} description={siteConfig.tagline}>
-      <Redirect to={'docs/from-authors'}/>
+      <Redirect to={'docs/introduction/about-platform'}/>
     </Layout>
   );
 }

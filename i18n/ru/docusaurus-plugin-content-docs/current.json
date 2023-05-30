@@ -15,16 +15,12 @@
     "message": "Параметры запуска",
     "description": "The label for category Launch parameters in sidebar sidebar"
   },
-  "sidebar.sidebar.category.Init data": {
-    "message": "Параметры инициализации",
-    "description": "The label for category Init data in sidebar sidebar"
+  "sidebar.sidebar.category.UI": {
+    "message": "UI",
+    "description": "The label for category UI in sidebar sidebar"
   },
-  "sidebar.sidebar.category.Features": {
-    "message": "Преимущества",
-    "description": "The label for category Features in sidebar sidebar"
-  },
-  "sidebar.sidebar.category.Tutorials and recipes": {
-    "message": "Обучающие материалы",
-    "description": "The label for category Tutorials and recipes in sidebar sidebar"
+  "sidebar.sidebar.category.Functionality": {
+    "message": "Функциональные возможности",
+    "description": "The label for category Functionality in sidebar sidebar"
   }
 }

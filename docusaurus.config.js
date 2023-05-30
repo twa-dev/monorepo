@@ -68,7 +68,7 @@ const config = {
       docs: {sidebar: {autoCollapseCategories: true}},
       navbar: {
         items: [
-          {type: 'doc', position: 'left', docId: 'from-authors', label: 'Docs'},
+          {type: 'doc', position: 'left', docId: 'introduction/about-platform', label: 'Docs'},
           {type: 'localeDropdown', position: 'right'},
           {
             href: 'https://github.com/twa-dev/docs',
