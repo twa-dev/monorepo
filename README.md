@@ -1,26 +1,81 @@
-# Telegram Web Apps Documentation
+# Turborepo starter
 
-## About
+This is an official starter Turborepo.
 
-This project represents the platform documentation using the
-[Docusaurus](https://docusaurus.io/) package. It provides full information about
-platform with all its aspects and features. You can find this documentation
-deployed at [docs.twa.dev](https://docs.twa.dev).
+## Using this example
 
-## Contribution
+Run the following command:
 
-As long as making good documentation is rather important and endless task, we
-are glad to see any contribution. 
+```sh
+npx create-turbo@latest
+```
 
-Please, don't forget that this documentation is developed in several 
-languages (English and Russian) and it is required to make related changes both 
-in English and Russian versions of documents. In case, you have problems with
-one of the languages, please, contact the repository owners, or request help
-in [community chat](https://t.me/twa_dev).
+## What's inside?
 
-Making changes by yourself also requires one more little workflow thing from
-developer. As long as we want developers commits readable, we use `commitizen`
-which makes commits more understandable. Here is how it works:
+This Turborepo includes the following packages/apps:
 
-1. Stage changes (for example `git add -A`);
-2. Commit them and describe what changes were done via `pnpm run commit`.
+### Apps and Packages
+
+- `docs`: a [Next.js](https://nextjs.org/) app
+- `web`: another [Next.js](https://nextjs.org/) app
+- `ui`: a stub React component library shared by both `web` and `docs` applications
+- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+
+Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+
+### Utilities
+
+This Turborepo has some additional tools already setup for you:
+
+- [TypeScript](https://www.typescriptlang.org/) for static type checking
+- [ESLint](https://eslint.org/) for code linting
+- [Prettier](https://prettier.io) for code formatting
+
+### Build
+
+To build all apps and packages, run the following command:
+
+```
+cd my-turborepo
+pnpm build
+```
+
+### Develop
+
+To develop all apps and packages, run the following command:
+
+```
+cd my-turborepo
+pnpm dev
+```
+
+### Remote Caching
+
+Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+
+By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+
+```
+cd my-turborepo
+npx turbo login
+```
+
+This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+
+Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+
+```
+npx turbo link
+```
+
+## Useful Links
+
+Learn more about the power of Turborepo:
+
+- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
+- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
+- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
+- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
+- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
+- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)

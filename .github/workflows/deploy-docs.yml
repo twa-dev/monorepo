@@ -7,6 +7,8 @@ on:
   push:
     branches:
       - "master"
+    paths:
+      - "apps/docs/**"
 
 jobs:
   deploy:
@@ -34,7 +36,7 @@ jobs:
 
       # Create documentation build directory.
       - name: Build documentation
-        run: pnpm run build
+        run: pnpm run docs:build
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
@@ -42,8 +44,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Build output to publish to the `gh-pages` branch:
-          publish_dir: ./build
+          publish_dir: ./apps/docs/build
           publish_branch: gh-pages-docs
           # The following lines assign commit authorship to the official
           # GH-Actions bot for deploys to `gh-pages` branch:

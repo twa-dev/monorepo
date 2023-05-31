@@ -1,62 +1,29 @@
 {
-  "name": "documentation",
-  "version": "0.0.1",
   "private": true,
   "scripts": {
     "commit": "git cz",
-    "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
-    "swizzle:list": "docusaurus swizzle @docusaurus/theme-classic --list",
-    "deploy": "docusaurus deploy",
-    "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
-  },
-  "dependencies": {
-    "@docusaurus/core": "2.4.0",
-    "@docusaurus/preset-classic": "2.4.0",
-    "@docusaurus/theme-common": "^2.4.0",
-    "@mdx-js/react": "^1.6.22",
-    "@types/mixpanel-browser": "^2.38.1",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.9",
-    "clsx": "^1.2.1",
-    "docusaurus-plugin-sass": "^0.2.2",
-    "mixpanel-browser": "^2.46.0",
-    "node-sass": "^8.0.0",
-    "prism-react-renderer": "^1.3.5",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "sass": "^1.56.1",
-    "sass-loader": "^13.2.0"
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "docs:dev": "turbo run dev --scope=\"docs\"",
+    "docs:build": "turbo run build --scope=\"docs\""
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.4.0",
-    "@docusaurus/types": "^2.4.0",
-    "@tsconfig/docusaurus": "^1.0.5",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@turbo/gen": "^1.9.7",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
-    "typescript": "^4.7.4"
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "workspace:*",
+    "prettier": "^2.5.1",
+    "rollup": "^3.23.0",
+    "rollup-plugin-serve": "^2.0.2",
+    "turbo": "^1.9.7"
   },
-  "browserslist": {
-    "production": [
-      ">0.5%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "engines": {
-    "node": ">=16.14"
-  },
+  "packageManager": "pnpm@7.15.0",
+  "name": "monorepo",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
