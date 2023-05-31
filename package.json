@@ -4,7 +4,9 @@
     "commit": "git cz",
     "build": "turbo run build",
     "packages:build": "turbo run build --filter=\"./packages/*\"",
-    "packages:release": "pnpm run packages:build && changeset publish",
+    "packages:test": "turbo run test --filter=\"./packages/*\"",
+    "packages:lint": "turbo run lint --filter=\"./packages/*\"",
+    "packages:release": "npm-run-all packages:test packages:lint packages:build && changeset publish",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "test": "turbo run test",
@@ -27,6 +29,7 @@
     "eslint-config-custom": "workspace:*",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
     "rimraf": "^5.0.1",
     "rollup": "^3.23.0",
@@ -36,7 +39,6 @@
     "turbo": "^1.10.0"
   },
   "packageManager": "pnpm@7.15.0",
-  "name": "monorepo",
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
