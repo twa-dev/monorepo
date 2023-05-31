@@ -1,5 +1,5 @@
 import {describe, expect, it} from '@jest/globals';
-import {isRecord} from '../src/validation';
+import {isRecord} from '../src';
 
 describe('validation.ts', () => {
   describe('isRecord', () => {

@@ -4,7 +4,7 @@ import {
   parseJsonValueAsBoolean,
   parseJsonValueAsNumber,
   parseJsonValueAsRgb, createJsonParser,
-} from '../../src/parsing';
+} from '../../src';
 
 describe('parsing', () => {
   describe('json.ts', () => {
