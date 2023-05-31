@@ -17,9 +17,6 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.BOT_ACCESS_TOKEN }}
 
       - name: Setup node
         uses: actions/setup-node@v3
