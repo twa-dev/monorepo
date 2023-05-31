@@ -3,6 +3,8 @@
   "scripts": {
     "commit": "git cz",
     "build": "turbo run build",
+    "packages:build": "turbo run build --filter=\"./packages/*\"",
+    "packages:release": "pnpm run packages:build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "test": "turbo run test",
