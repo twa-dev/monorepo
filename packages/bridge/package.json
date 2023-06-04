@@ -1,6 +1,6 @@
 {
   "name": "@twa-dev/bridge",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Communication layer between Telegram and frontend applications.",
   "author": "Vladislav Kibenko <wolfram.deus@gmail.com>",
   "homepage": "https://github.com/twa-dev/monorepo#readme",
