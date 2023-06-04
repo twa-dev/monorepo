@@ -1,0 +1,46 @@
+{
+  "name": "@twa-dev/bridge",
+  "version": "0.0.0",
+  "description": "Communication layer between Telegram and frontend applications.",
+  "author": "Vladislav Kibenko <wolfram.deus@gmail.com>",
+  "homepage": "https://github.com/twa-dev/monorepo#readme",
+  "keywords": [
+    "telegram",
+    "telegram-web-apps",
+    "telegram-bot",
+    "twa",
+    "typescript",
+    "bridge",
+    "webview"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist/**/*"
+  ],
+  "main": "dist/index.cjs",
+  "browser": "dist/browser.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twa-dev/monorepo.git",
+    "directory": "packages/bridge"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "build": "rimraf dist && rollup --config rollup.config.js",
+    "dev": "rollup --watch --config playground/rollup.config.js"
+  },
+  "bugs": {
+    "url": "https://github.com/twa-dev/monorepo/issues"
+  },
+  "dependencies": {
+    "@twa-dev/utils": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

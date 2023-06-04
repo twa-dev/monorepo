@@ -138,6 +138,12 @@ importers:
         specifier: ^4.7.4
         version: 4.9.5
 
+  packages/bridge:
+    dependencies:
+      '@twa-dev/utils':
+        specifier: workspace:*
+        version: link:../utils
+
   packages/eslint-config-custom:
     dependencies:
       eslint-config-prettier:
@@ -152,11 +158,7 @@ importers:
 
   packages/tsconfig: {}
 
-  packages/utils:
-    devDependencies:
-      tsconfig:
-        specifier: workspace:*
-        version: link:../tsconfig
+  packages/utils: {}
 
 packages:
 
