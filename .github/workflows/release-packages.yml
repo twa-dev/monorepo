@@ -10,6 +10,9 @@ on:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
+env:
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
 jobs:
   release:
     name: Release
@@ -43,10 +46,11 @@ jobs:
       - name: Build packages
         run: pnpm run packages:build
 
-      - name: Release
+      - name: Publish
         uses: changesets/action@v1
         with:
           publish: pnpm changeset publish
+          commit: 'chore(packages): version packages'
+          title: 'chore(packages): version packages'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
