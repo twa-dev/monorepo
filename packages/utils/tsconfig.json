@@ -1,11 +1,28 @@
 {
-  "extends": "tsconfig/base.json",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "@twa-dev/utils",
   "compilerOptions": {
-    "target": "ESNext",
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
+    "isolatedModules": true,
     "module": "ESNext",
-    "outDir": "dist"
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "outDir": "dist",
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ESNext"
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

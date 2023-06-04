@@ -33,9 +33,6 @@
     "build": "rimraf dist && rollup --config rollup.config.js",
     "dev": "rollup --watch --config playground/rollup.config.js"
   },
-  "devDependencies": {
-    "tsconfig": "workspace:*"
-  },
   "bugs": {
     "url": "https://github.com/twa-dev/monorepo/issues"
   },
