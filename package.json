@@ -3,6 +3,7 @@
   "scripts": {
     "commit": "git cz",
     "build": "turbo run build",
+    "bridge:dev": "turbo run dev --scope=\"bridge\"",
     "packages:build": "turbo run build --filter=\"./packages/*\"",
     "packages:test": "turbo run test --filter=\"./packages/*\"",
     "packages:lint": "turbo run lint --filter=\"./packages/*\"",
