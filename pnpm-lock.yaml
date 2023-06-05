@@ -67,6 +67,9 @@ importers:
       turbo:
         specifier: ^1.10.1
         version: 1.10.1
+      typescript:
+        specifier: ^4.7.4
+        version: 4.9.5
 
   apps/docs:
     dependencies:
