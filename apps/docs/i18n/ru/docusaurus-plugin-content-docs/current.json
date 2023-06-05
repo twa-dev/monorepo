@@ -22,5 +22,9 @@
   "sidebar.sidebar.category.Functionality": {
     "message": "Функциональные возможности",
     "description": "The label for category Functionality in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.📦 Libraries": {
+    "message": "📦 Библиотеки",
+    "description": "The label for category 📦 Libraries in sidebar sidebar"
   }
 }
