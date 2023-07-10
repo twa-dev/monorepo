@@ -27,8 +27,8 @@
     "message": "📦 Библиотеки",
     "description": "The label for category 📦 Libraries in sidebar sidebar"
   },
-  "sidebar.sidebar.category.guides": {
+  "sidebar.sidebar.category.Guides": {
     "message": "Обучающие материалы",
-    "description": "The label for category guides in sidebar sidebar"
+    "description": "The label for category Guides in sidebar sidebar"
   }
 }
